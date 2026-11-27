@@ -9,5 +9,6 @@
     height: 30px;
     background-color: beige;
     border: 1px solid black;
-    flex:  1 30px;
+    flex: 0 0 30px;
+    box-sizing: border-box;
 }
