@@ -1,15 +1,20 @@
 const container = document.querySelector('#container')
 
-for (let i=0; i < 16; i++){
-    for (let j=0;j< 16; j++){
-        const square = document.createElement('div');
-        container.appendChild(square)
+function generateGrid(size){
+    for (let i=0; i < size; i++){
+        for (let j=0;j< size; j++){
+            const square = document.createElement('div');
+            container.appendChild(square)
 
-        square.addEventListener('mouseenter', ()=>{
-            square.classList.add('hovered')
-        })
+            square.addEventListener('mouseenter', ()=>{
+                square.classList.add('hovered')
+            })
+        }
     }
 }
+
+generateGrid(16);
+
 
 const btn = document.querySelector('button');
 let howManyDivs;
@@ -20,4 +25,6 @@ btn.addEventListener('click', () => {
         howManyDivs = userInput;
     }
 })
+
+
 
