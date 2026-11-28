@@ -21,10 +21,17 @@ let howManyDivs;
 
 btn.addEventListener('click', () => {
     const userInput = prompt('How many number of squares per side for the new grid');
-    if (userInput !== null){
-        howManyDivs = userInput;
-    }
-})
+    if (userInput === null) return
 
+    const size = Number(userInput)
+    if (!Number.isInteger(size) || size < 1 || size > 100){
+        alert('Enter a whole number from 1 to 100.');
+        return;
+    }
+
+    container.replaceChildren();
+
+    generateGrid(size);
+})
 
 
