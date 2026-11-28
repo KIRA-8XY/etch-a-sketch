@@ -11,3 +11,13 @@ for (let i=0; i < 16; i++){
     }
 }
 
+const btn = document.querySelector('button');
+let howManyDivs;
+
+btn.addEventListener('click', () => {
+    const userInput = prompt('How many number of squares per side for the new grid');
+    if (userInput !== null){
+        howManyDivs = userInput;
+    }
+})
+
