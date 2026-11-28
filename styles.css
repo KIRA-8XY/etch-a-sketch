@@ -2,6 +2,7 @@
     width: 480px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 #container div {
@@ -13,6 +14,6 @@
     box-sizing: border-box;
 }
 
-#container div:hover{
+#container div.hovered {
     background-color: burlywood;
 }
